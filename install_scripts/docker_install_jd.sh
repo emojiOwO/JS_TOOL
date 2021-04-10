@@ -226,7 +226,7 @@ docker run -dit \
     $NeedDirConfig \
     $NeedDirLog \
     $NeedDirScripts \
-    -p $PanelPort:5678 \
+    -p $PanelPort:9998 \
     --name $ContainerName \
     --hostname jd \
     --restart always \
