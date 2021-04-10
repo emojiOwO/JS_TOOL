@@ -54,7 +54,7 @@ Welcome() {
   2)
     echo "   CentOS/RedHat/Fedora等红帽系"
     curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
-    sudo yum -y  update && sudo yum -y install git wget curl perl yarn
+    sudo yum -y update && sudo yum -y install git wget curl perl yarn
     if [ ! -x "$(command -v node)" ] || [ ! -x "$(command -v yarn)" ] || [ ! -x "$(command -v git)" ] || [ ! -x "$(command -v curl)" ] || [ ! -x "$(command -v wget)" ] || [ ! -x "$(command -v perl)" ]; then
       echo -e "\n依赖未安装完整,请重新运行该脚本且切换良好的网络环境！\n"
       exit 1
@@ -65,7 +65,7 @@ Welcome() {
     ;;
   3)
     echo "   Termux为主的安卓系"
-    pkg -y update && pkg -y  install git perl yarn wget curl nano cronie
+    pkg update -y && pkg install -y git perl yarn wget curl nano cronie
     if [ ! -x "$(command -v node)" ] || [ ! -x "$(command -v yarn)" ] || [ ! -x "$(command -v git)" ] || [ ! -x "$(command -v curl)" ] || [ ! -x "$(command -v wget)" ] || [ ! -x "$(command -v perl)" ]; then
       echo -e "\n依赖未安装完整,请重新运行该脚本且切换良好的网络环境！\n"
       exit 1
