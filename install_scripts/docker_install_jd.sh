@@ -112,10 +112,10 @@ Input_ContainerName
 
 # 输入端口号
 Input_PanelPort() {
-    echo -n -e "\n\e[33m请输入控制面板端口号[默认为：5678]->\e[0m"
+    echo -n -e "\n\e[33m请输入控制面板端口号[默认为：9998]->\e[0m"
     read panel_port
     if [ -z "$panel_port" ]; then
-        PanelPort="5678"
+        PanelPort="9998"
     else
         PanelPort=$panel_port
     fi
