@@ -21,7 +21,7 @@ detect_system() {
 
 Welcome() {
   echo -e '#####################################################'
-  echo -e "\n正在为您安装环境（依赖）：\ngit wget curl perl moreutils node.js npm\n"
+  echo -e "\n正在为您安装环境（依赖）：\ngit wget curl perl moreutils node.js yarn/npm\n"
   echo -e '#####################################################'
   echo -e "除了安卓，由于其它系统安装软件可能需要使用sudo，本脚本除安装环境外不会调用再次任何root的执行权限\n"
   echo -e "若担心安全风险，可选择自行安装环境!!\n"
