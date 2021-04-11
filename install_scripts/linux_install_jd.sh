@@ -79,7 +79,7 @@ Welcome() {
     ;;
   4)
     echo "   已安装(继续)"
-    if [ ! -x "$(command -v node)" ] || [ ! -x "$(command -v yarn)" ] || [ ! -x "$(command -v git)" ] || [ ! -x "$(command -v curl)" ] || [ ! -x "$(command -v wget)" ] || [ ! -x "$(command -v perl)" ]; then
+    if [ ! -x "$(command -v node)" ] || [ ! -x "$(command -v git)" ] || [ ! -x "$(command -v curl)" ] || [ ! -x "$(command -v wget)" ] || [ ! -x "$(command -v perl)" ]; then
       echo -e "\n依赖未安装完整！\n"
       exit 1
     else
