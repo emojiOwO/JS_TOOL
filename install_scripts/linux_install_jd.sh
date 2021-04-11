@@ -108,5 +108,24 @@ INSTALLATION_CLONE() {
 
   echo -e "\n安装完成！！！！"
 }
+
+
+TG_BOT() {
+  echo -e "\n 是否启用TG机器人功能，需额外占据200mb左右的空间，可能出现占用较大运行内存，cpu资源加重等情况"
+  echo -e "\n 任意键暂不启用，后续仍可以开启。输入 1 现在开启。"
+  read -n1 PY_TYPE
+  case $PY_TYPE in
+  1)
+    case $LINUX_TYPE in
+    1)
+      sudo apt install -y zlib python3 gcc
+    2)
+      sudo yum install -y zlib python3 gcc
+    3)
+      pkg install -y zlib python3 gcc
+  *)
+    exit 0
+}
 detect_system
 Welcome
+TG_BOT
