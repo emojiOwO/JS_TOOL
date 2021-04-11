@@ -119,12 +119,19 @@ TG_BOT() {
     case $LINUX_TYPE in
     1)
       sudo apt install -y zlib python3 gcc
+      ;;
     2)
       sudo yum install -y zlib python3 gcc
+      ;;
     3)
       pkg install -y zlib python3 gcc
+      ;;
+    esac
+    ;;
   *)
     exit 0
+    ;;
+  esac
 }
 detect_system
 Welcome
