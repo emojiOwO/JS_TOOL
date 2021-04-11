@@ -26,7 +26,7 @@ Welcome() {
   echo -e "除了安卓，由于其它系统安装软件可能需要使用sudo，本脚本除安装环境外不会调用再次任何root的执行权限\n"
   echo -e "若担心安全风险，可选择自行安装环境!!\n"
   echo -e '#####################################################'
-  echo -e "检测到系统似乎为$SYSTEM,请输入你的系统对应序号 :\n"
+  echo -e "检测到系统似乎为 $SYSTEM ,请输入你的系统对应序号 :\n"
   echo -e "1   debian/ubuntu/armbian/OpenMediaVault，以及其他debian系\n"
   echo -e "2   CentOS/RedHat/Fedora等红帽系\n"
   echo -e "3   Termux为主的安卓系\n"
@@ -49,6 +49,7 @@ Welcome() {
     else
       echo -e "\n依赖安装完成,开始部署脚本，否则按 Ctrl + C 退出！\n"
       INSTALLATION_CLONE
+      TG_BOT
     fi
     ;;
   2)
@@ -61,6 +62,7 @@ Welcome() {
     else
       echo -e "\n依赖安装完成,开始部署脚本，否则按 Ctrl + C 退出！\n"
       INSTALLATION_CLONE
+      TG_BOT
     fi
     ;;
   3)
@@ -72,6 +74,7 @@ Welcome() {
     else
       echo -e "\n依赖安装完成,开始部署脚本，否则按 Ctrl + C 退出！\n"
       INSTALLATION_CLONE
+      TG_BOT
     fi
     ;;
   4)
@@ -82,6 +85,7 @@ Welcome() {
     else
       echo -e "\n依赖已安装,开始部署脚本，否则按 Ctrl + C 退出！\n"
       INSTALLATION_CLONE
+      TG_BOT
     fi
     ;;
   *)
@@ -135,4 +139,3 @@ TG_BOT() {
 }
 detect_system
 Welcome
-TG_BOT
