@@ -13,7 +13,7 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
     && apk update -f \
     && apk upgrade \
-    && apk add --no-cache bash git wget curl nano perl openssh-client \
+    && apk add --no-cache bash coreutils moreutils git wget curl nano perl openssl tzdata \
     && rm -rf /var/cache/apk/* \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
@@ -22,7 +22,6 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
     && git clone -b $JS_TOOL_BRANCH $JS_TOOL_URL $JD_DIR \
     && cd ${JD_DIR}/ \
     && bash jd.sh update \
-    && bash jd.sh panelon \
     && npm install -g pm2 --registry=https://registry.npm.taobao.org \
     && rm -rf /root/.npm
 WORKDIR $JD_DIR
