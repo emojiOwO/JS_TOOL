@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # 以 Docker 容器的方式一键安装 jd-base。
 #

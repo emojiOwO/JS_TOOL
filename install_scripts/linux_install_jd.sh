@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 clear
 echo -e "\n"
 echo -e "\n开始部署jd_shell\n"
