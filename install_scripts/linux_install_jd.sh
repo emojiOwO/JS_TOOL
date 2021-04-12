@@ -101,7 +101,7 @@ INSTALLATION_CLONE() {
 
   echo -e "\n2. 配置文件"
   crontab -l >$JdDir/old_crontab
-
+  npm config set registry https://registry.npm.taobao.org
   echo -e "\n3. 执行 git_pull.sh 进行脚本更新以及定时文件更新"
   bash $JdDir/jd.sh update
 
