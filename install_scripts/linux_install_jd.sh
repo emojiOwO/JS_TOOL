@@ -42,7 +42,7 @@ Welcome() {
     echo "   debian/ubuntu/armbian/OpenMediaVault，以及其他debian系"
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-    sudo apt update && sudo apt install -y git wget curl perl yarn
+    sudo apt update && sudo apt install -y git wget curl perl yarn npm
     if [ ! -x "$(command -v node)" ] || [ ! -x "$(command -v yarn)" ] || [ ! -x "$(command -v git)" ] || [ ! -x "$(command -v curl)" ] || [ ! -x "$(command -v wget)" ] || [ ! -x "$(command -v perl)" ]; then
       echo -e "\n依赖未安装完整,请重新运行该脚本且切换良好的网络环境！\n"
       exit 1
@@ -55,7 +55,7 @@ Welcome() {
   2)
     echo "   CentOS/RedHat/Fedora等红帽系"
     curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
-    sudo yum -y update && sudo yum -y install git wget curl perl yarn
+    sudo yum -y update && sudo yum -y install git wget curl perl yarn npm
     if [ ! -x "$(command -v node)" ] || [ ! -x "$(command -v yarn)" ] || [ ! -x "$(command -v git)" ] || [ ! -x "$(command -v curl)" ] || [ ! -x "$(command -v wget)" ] || [ ! -x "$(command -v perl)" ]; then
       echo -e "\n依赖未安装完整,请重新运行该脚本且切换良好的网络环境！\n"
       exit 1
