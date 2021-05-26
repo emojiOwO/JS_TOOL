@@ -52,7 +52,7 @@ if [ $NewImage = true ]; then
     if [ $HasImage = true ]; then
         docker stop jd
         docker rm jd
-        docker rmi $(docker images jd -q)
+        docker rmi $(docker images lantianxiang1/js_tool -q)
     fi
     if [ $GetImageType = "Local" ]; then
         rm -rf $WorkDir
